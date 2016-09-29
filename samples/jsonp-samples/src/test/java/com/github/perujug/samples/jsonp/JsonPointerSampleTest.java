@@ -70,7 +70,7 @@ public class JsonPointerSampleTest {
     }
 
     /**
-     * Probar que se puede agregar un nuevo objeto al final de un array utilizando "-"
+     * Probar que se puede agregar un nuevo objeto al final de un Json Array utilizando "-"
      */
     @Test
     public void shouldAddPlanet() {
@@ -81,7 +81,7 @@ public class JsonPointerSampleTest {
     }
 
     /**
-     * Probar que se puede agregar un nuevo objeto al final de un array utilizando "-"
+     * Probar que se puede reemplazar un objeto dentro de un Json Array utilizando "-"
      */
     @Test
     public void shouldReplacePlanet() {
@@ -92,7 +92,7 @@ public class JsonPointerSampleTest {
     }
 
     /**
-     * Probar que se puede agregar un nuevo objeto al final de un array utilizando "-"
+     * Probar que se puede eliminar objeto dentro de un Json Array "-"
      */
     @Test
     public void shouldRemovePlanet() {
