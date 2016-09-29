@@ -2,6 +2,16 @@
 
 * http://download.oracle.com/otndocs/jcp/json_p-1_1-edr-spec/index.html[Specification]
 
+=== JSON-P Source Code
+
+git://java.net/jsonp~git
+
+Before referring to dependencies, clone and build project using:
+
+```
+mvn clean install
+```
+
 === Maven Dependency
 
 [source, xml]
