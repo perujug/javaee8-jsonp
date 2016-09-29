@@ -81,7 +81,7 @@ public class JsonPointerSampleTest {
     }
 
     /**
-     * Probar que se puede reemplazar un objeto dentro de un Json Array utilizando "-"
+     * Probar que se puede reemplazar un objeto dentro de un Json Array
      */
     @Test
     public void shouldReplacePlanet() {
@@ -92,7 +92,7 @@ public class JsonPointerSampleTest {
     }
 
     /**
-     * Probar que se puede eliminar objeto dentro de un Json Array "-"
+     * Probar que se puede eliminar objeto dentro de un Json Array
      */
     @Test
     public void shouldRemovePlanet() {
