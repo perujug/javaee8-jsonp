@@ -4,11 +4,13 @@
 
 === JSON-P Source Code
 
-git://java.net/jsonp~git
+Git repository: https://java.net/projects/jsonp/sources/git/show[git://java.net/jsonp~git]
 
 Before referring to dependencies, clone and build project using:
 
 ```
+git clone git://java.net/jsonp~git
+cd jsonp~git
 mvn clean install
 ```
 
