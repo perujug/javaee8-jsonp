@@ -6,6 +6,7 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonPointer;
 import javax.json.JsonValue;
+import java.io.InputStreamReader;
 import java.io.StringReader;
 
 import static org.junit.Assert.assertEquals;
@@ -15,30 +16,8 @@ import static org.junit.Assert.assertEquals;
  */
 public class JsonPointerSampleTest {
 
-    private final String json = "{\n" +
-            "  \"planets\": [\n" +
-            "    {\n" +
-            "      \"name\": \"Earth\",\n" +
-            "      \"technologicallyAdvancedSpecies\": \"Homo sapien\",\n" +
-            "      \"hasBuiltSpaceships\": true,\n" +
-            "      \"moons\": 1\n" +
-            "    },\n" +
-            "    {\n" +
-            "      \"name\": \"Kerbin\",\n" +
-            "      \"technologicallyAdvancedSpecies\": \"Kerbal\",\n" +
-            "      \"hasBuiltSpaceships\": true,\n" +
-            "      \"moons\": 2\n" +
-            "    }\n" +
-            "  ]\n" +
-            "}";
-    private final String planet = "{\n" +
-            "      \"name\": \"Mars\",\n" +
-            "      \"technologicallyAdvancedSpecies\": \"None\",\n" +
-            "      \"hasBuiltSpaceships\": true,\n" +
-            "      \"moons\": 2\n" +
-            "    }";
-    final private JsonObject jsonObject = Json.createReader(new StringReader(json)).readObject();
-    final private JsonObject planetJsonObject = Json.createReader(new StringReader(planet)).readObject();
+    final private JsonObject jsonObject = Json.createReader(new InputStreamReader(JsonPointerSampleTest.class.getResourceAsStream("/planets.json"))).readObject();
+    final private JsonObject planetJsonObject = Json.createReader(new InputStreamReader(JsonPointerSampleTest.class.getResourceAsStream("/mars.json"))).readObject();
 
     /**
      * Probar que se accede al primer objeto/array del objeto JSON utilizando JsonPointer
