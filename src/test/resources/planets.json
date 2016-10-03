@@ -1,0 +1,16 @@
+{
+  "planets": [
+    {
+      "name": "Earth",
+      "technologicallyAdvancedSpecies": "Homo sapien",
+      "hasBuiltSpaceships": true,
+      "moons": 1
+    },
+    {
+      "name": "Kerbin",
+      "technologicallyAdvancedSpecies": "Kerbal",
+      "hasBuiltSpaceships": true,
+      "moons": 2
+    }
+  ]
+}

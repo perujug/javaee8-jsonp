@@ -4,6 +4,18 @@ image:https://badges.gitter.im/perujug/javaee8-jsonp.svg[link="https://gitter.im
 
 * http://download.oracle.com/otndocs/jcp/json_p-1_1-edr-spec/index.html[Specification]
 
+=== JSON-P Source Code
+
+Git repository: https://java.net/projects/jsonp/sources/git/show[git://java.net/jsonp~git]
+
+Before referring to dependencies, clone and build project using:
+
+```
+git clone git://java.net/jsonp~git
+cd jsonp~git
+mvn clean install
+```
+
 === Maven Dependency
 
 [source, xml]
