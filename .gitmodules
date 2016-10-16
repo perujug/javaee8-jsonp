@@ -1,0 +1,3 @@
+[submodule "jsonp~git"]
+	path = jsonp~git
+	url = git://java.net/jsonp~git
