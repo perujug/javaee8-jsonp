@@ -6,15 +6,12 @@ image:https://badges.gitter.im/perujug/javaee8-jsonp.svg[link="https://gitter.im
 
 === JSON-P Source Code
 
-Git repository: https://java.net/projects/jsonp/sources/git/show[git://java.net/jsonp~git]
+Update sub-module:
 
-Before referring to dependencies, clone and build project using:
-
-```
-git clone git://java.net/jsonp~git
-cd jsonp~git
-mvn clean install
-```
+[source, bash]
+----
+git submodule update jsonp~git/
+----
 
 === Maven Dependency
 
