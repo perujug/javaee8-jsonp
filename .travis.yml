@@ -6,3 +6,5 @@ jdk:
 
 before_script:
   - git submodule update --init jsonp~git/
+
+script: ./mvnw clean install -f jsonp~git/api/pom.xml && ./mvnw clean install -f jsonp~git/impl/pom.xml && ./mvnw clean test -f json-pointer/pom.xml
