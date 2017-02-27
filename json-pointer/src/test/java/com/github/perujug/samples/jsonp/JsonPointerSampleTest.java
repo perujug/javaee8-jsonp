@@ -1,5 +1,6 @@
 package com.github.perujug.samples.jsonp;
 
+import org.glassfish.json.JsonPointerImpl;
 import org.junit.Test;
 
 import javax.json.Json;
@@ -24,7 +25,7 @@ public class JsonPointerSampleTest {
      */
     @Test
     public void usingJsonPointerToGetObject() {
-        final JsonPointer pointer = new JsonPointer("/planets");
+        final JsonPointer pointer = new JsonPointerImpl("/planets");
         final JsonValue jsonValue = pointer.getValue(jsonObject);
         assertEquals(jsonValue, jsonObject.get("planets"));
     }
@@ -43,7 +44,7 @@ public class JsonPointerSampleTest {
      */
     @Test
     public void shouldGetRootElement() {
-        final JsonPointer pointer = new JsonPointer("");
+        final JsonPointer pointer = new JsonPointerImpl("");
         final JsonValue jsonValue = pointer.getValue(jsonObject);
         assertEquals(jsonValue, jsonObject);
     }
@@ -53,7 +54,7 @@ public class JsonPointerSampleTest {
      */
     @Test
     public void shouldAddPlanet() {
-        final JsonPointer pointer = new JsonPointer("/planets/-");
+        final JsonPointer pointer = new JsonPointerImpl("/planets/-");
         final JsonObject planets = pointer.add(jsonObject, planetJsonObject);
         System.out.printf("Planets: %s", planets.toString());
         assertEquals(planets.getJsonArray("planets").size(), 3);
@@ -64,7 +65,7 @@ public class JsonPointerSampleTest {
      */
     @Test
     public void shouldReplacePlanet() {
-        final JsonPointer pointer = new JsonPointer("/planets/1");
+        final JsonPointer pointer = new JsonPointerImpl("/planets/1");
         final JsonObject planets = pointer.replace(jsonObject, planetJsonObject);
         System.out.printf("Planets: %s", planets.toString());
         assertEquals(planets.getJsonArray("planets").size(), 2);
@@ -75,7 +76,7 @@ public class JsonPointerSampleTest {
      */
     @Test
     public void shouldRemovePlanet() {
-        final JsonPointer pointer = new JsonPointer("/planets/1");
+        final JsonPointer pointer = new JsonPointerImpl("/planets/1");
         final JsonObject planets = pointer.remove(jsonObject);
         System.out.printf("Planets: %s", planets.toString());
         assertEquals(planets.getJsonArray("planets").size(), 1);
